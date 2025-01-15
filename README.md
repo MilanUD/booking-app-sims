@@ -49,6 +49,7 @@ This is a WPF booking application that provides different functionalities based 
 1. Clone the repository:
 ```bash
 git clone https://github.com/MilanUD/booking-app-sims.git
+```
 2. Open the project in Visual Studio.
 3. Install all dependencies via NuGet Package Manager.
 4. Run the application by pressing the **Start** button.
