@@ -83,7 +83,6 @@ namespace BookingApp.Repository
             }
             else  return -1;
         }
-        //useri koji su napravili rezervacije za jednu istancu ture
         public List<int> GetAllUsersByTourInstanceId(int id)
         {
             List<int> users = new List<int>();

@@ -80,7 +80,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
                     Table table = new Table(2);
                     table.SetWidth(UnitValue.CreatePercentValue(100));
 
-                    // Tekstualna ćelija
                     Cell textCell = new Cell().SetBorder(Border.NO_BORDER);
                     textCell.Add(new Paragraph("Tour Reservation Report").SetFontSize(22).SetBold());
                     textCell.Add(new Paragraph($"Tour Name: {tourInstance.BaseTour.Title}").SetFontSize(14));
@@ -89,7 +88,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
                     textCell.Add(new Paragraph($"Duration: {tourInstance.BaseTour.Duration.ToString()} hours").SetFontSize(14));
                     textCell.Add(new Paragraph($"Language: {tourInstance.BaseTour.Language}").SetFontSize(14));
 
-                    // Dodavanje liste ključnih tačaka
                     iText.Layout.Element.List pdfList = new iText.Layout.Element.List()
                         .SetSymbolIndent(12)
                         .SetListSymbol("\u2022")
@@ -104,7 +102,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
                     textCell.Add(new Paragraph("Key points:").SetFontSize(16).SetBold());
                     textCell.Add(pdfList);
 
-                    // Dodavanje liste turista
                     textCell.Add(new Paragraph("Tourists:").SetFontSize(16).SetBold());
                     textCell.Add(new Paragraph("---------------------------").SetFontSize(12));
                     foreach (var tourist in reservation.Tourists)
@@ -112,26 +109,21 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
                         textCell.Add(new Paragraph($"Name: {tourist.Name}").SetFontSize(14));
                         textCell.Add(new Paragraph($"Surname: {tourist.LastName}").SetFontSize(14));
                         textCell.Add(new Paragraph($"Age: {tourist.Age}").SetFontSize(14));
-                        textCell.Add(new Paragraph("---------------------------").SetFontSize(12)); // Razdelnik za čitljivost
+                        textCell.Add(new Paragraph("---------------------------").SetFontSize(12)); 
                     }
 
-                    // Dodavanje tekstualne ćelije u tabelu
                     table.AddCell(textCell);
 
-                    // Slika ćelija
                     Cell imageCell = new Cell().SetBorder(Border.NO_BORDER);
                     Image tourPicture = new Image(ImageDataFactory.Create(tourInstance.BaseTour.Pictures[0]));
                     tourPicture.SetAutoScale(true);
                     imageCell.Add(tourPicture);
                     imageCell.Add(new Paragraph(tourInstance.BaseTour.Description).SetFontSize(12)); // Opis slike
 
-                    // Dodavanje ćelija u tabelu
                     table.AddCell(imageCell);
 
-                    // Dodavanje tabele u dokument
                     document.Add(table);
 
-                    // Zatvaranje dokumenta
                     document.Close();
                 }
             }
@@ -210,8 +202,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
 
         private void OpenTourReview(TourInstance tourInstance)
         {
-            //UserTourReviewView userTourReviewView = new UserTourReviewView(LoggedInUser, tourInstance);
-            //userTourReviewView.Show();
             MainViewModel.SwitchView(new UserTourReviewViewModel(LoggedInUser, tourInstance, MainViewModel, _dialogService, TourInstances));
         }
     }

@@ -36,7 +36,7 @@ namespace BookingApp.WPF.Views.TouristV
 
         private FontSizeManager()
         {
-            _fontSizePercentage = 100; // Default value, 100%
+            _fontSizePercentage = 100;
         }
     }
 }

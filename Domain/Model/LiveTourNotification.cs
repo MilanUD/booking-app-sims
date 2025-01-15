@@ -47,7 +47,6 @@ namespace BookingApp.Domain.Model
             if (TouristsId == null)
             {
                 return csvV;
-                //TouristsIds = new List<int>();
             }
             foreach (int t in TouristsId)
             {

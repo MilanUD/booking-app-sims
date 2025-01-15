@@ -72,7 +72,7 @@ namespace BookingApp.Repository
             RenovationRecommendation current = _renovationRecommendations.Find(a => a.Id == renovationRecommendation.Id);
             int index = _renovationRecommendations.IndexOf(current);
             _renovationRecommendations.Remove(current);
-            _renovationRecommendations.Insert(index, renovationRecommendation);       // keep ascending order of ids in file
+            _renovationRecommendations.Insert(index, renovationRecommendation);       
             _serializer.ToCSV(FilePath, _renovationRecommendations);
             return renovationRecommendation;
         }

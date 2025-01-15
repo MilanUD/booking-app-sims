@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Height="450" Width="800">
     <UserControl.Resources>
-        <!-- Stil za Page dugmiće ScrollBar-a -->
+        
         <Style x:Key="ScrollBarPageButtonStyle" TargetType="RepeatButton">
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="IsTabStop" Value="False" />

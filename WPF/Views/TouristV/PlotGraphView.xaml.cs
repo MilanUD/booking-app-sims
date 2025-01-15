@@ -23,7 +23,6 @@ namespace BookingApp.WPF.Views
         public PlotGraphView()
         {
             InitializeComponent();
-            //DataContext = new PlotGraphViewModel(keyValuePairs, xAxisTitle);
         }
     }
 }

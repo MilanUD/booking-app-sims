@@ -193,11 +193,11 @@
                             <Image Height="40" Width="40" HorizontalAlignment="Center" Source="../../../Resources/Images/calendar-icon.png"/>
                             <TextBlock Text="{Binding StartEndDate}" Style="{StaticResource MyTextStyle}" TextWrapping="Wrap"/>
                         </StackPanel>
-                        <!-- Add a StackPanel with full width for Description to ensure it stays on a separate line -->
+                        
                         <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Width="280" Margin="0,20,0,0"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
                             <TextBlock Text="{Binding Description}" Style="{StaticResource MyTextStyle}" TextWrapping="Wrap"/>
                         </StackPanel>
-                        <!-- Add another StackPanel for buttons to ensure they stay together -->
+                        
 
                         <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal">
                             <Button Command="{Binding ElementName=itemsContainer, Path=DataContext.EditCommand}" CommandParameter="{Binding}" Margin="5,5,5,5" Height="40" Grid.Column="2" Grid.Row="1" Width="50" Style="{StaticResource MyButtonStyle}">Edit</Button>

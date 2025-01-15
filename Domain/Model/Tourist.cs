@@ -69,17 +69,6 @@ namespace BookingApp.Domain.Model
             return csvValues;
         }
 
-        /*
-        public List<string> GiftCardsForCSV()
-        {
-            List<string> csvV = new List<string>();
-            foreach (int gc in GiftCardIds)
-            {
-                csvV.Add(gc.ToString());
-            }
-            return csvV;
-        }
-        */
         public void FromCSV(string[] values)
         {
             Id = int.Parse(values[0]);

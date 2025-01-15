@@ -11,7 +11,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Expander FontFamily="Arial" Header="{Binding Path=Count, StringFormat='{}{0} tourists'}">
-                        <!-- Ugnježdeni ItemsControl za prikaz svih turista unutar jedne liste -->
+                        
                         <ItemsControl ItemsSource="{Binding}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>

@@ -101,7 +101,7 @@ namespace BookingApp.WPF.Views.TouristV
 
         private void MediaElement_MediaFailed(object sender, ExceptionRoutedEventArgs e)
         {
-            // Handle media load failure
+           
         }
 
         private void Slider_PreviewMouseDown(object sender, MouseButtonEventArgs e)

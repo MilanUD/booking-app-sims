@@ -45,8 +45,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
         {
             var viewModel = new MoreInfoAboutTourViewModel(tourInstance,_dialogService);
             bool? result = _dialogService.ShowDialog(viewModel);
-            //MoreInfoAboutTourView moreInfoAboutTourView = new MoreInfoAboutTourView(tourInstance);
-            //moreInfoAboutTourView.Show();
         }
 
         public void GoBack()
@@ -56,8 +54,7 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
 
         private void ReserveTour(TourInstance tourInstance)
         {
-            //NumberOfTouristInsertion numberOfTouristInsertion = new NumberOfTouristInsertion(SelectedTour, TourInstances, LoggedInUser, UserGiftCards);
-            //numberOfTouristInsertion.Show();
+            
             var viewModel = new NumberOfTouristInsertionViewModel(tourInstance, TourInstances, LoggedInUser, UserGiftCards, _dialogService);
             bool? result = _dialogService.ShowDialog(viewModel);
             if (result == true)

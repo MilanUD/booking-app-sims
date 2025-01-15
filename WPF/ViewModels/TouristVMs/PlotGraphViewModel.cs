@@ -20,10 +20,9 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
         MainViewModel MainViewModel { get; set; }
         public User LoggedInUser {  get; set; }
 
-        public string XAxisTitle { get; set; } // Naslov za x-osu
+        public string XAxisTitle { get; set; } 
         public IDialogService _dialogService;
 
-        // Konstruktor koji prima Dictionary
         public PlotGraphViewModel(Dictionary<string, int> dataDictionary, string xAxisTitle, MainViewModel mainViewModel, User loggedInUser, IDialogService dialogService)
         {
             SeriesCollection = new SeriesCollection();
@@ -37,10 +36,9 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
                 });
             }
 
-            // Postavite Labels i Formatter ako je potrebno
             Labels = dataDictionary.Keys.ToArray();
-            Formatter = value => value.ToString("N0"); // N0 formatira broj bez decimala
-            XAxisTitle = xAxisTitle; // Postavljanje naslova x-ose
+            Formatter = value => value.ToString("N0"); 
+            XAxisTitle = xAxisTitle; 
             MainViewModel = mainViewModel;
             GoBackCommand = new RelayCommand(GoBack);
             LoggedInUser = loggedInUser;

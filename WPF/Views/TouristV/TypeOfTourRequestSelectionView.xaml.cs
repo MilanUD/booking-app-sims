@@ -24,7 +24,7 @@ namespace BookingApp.WPF.Views
         public TypeOfTourRequestSelectionView()
         {
             InitializeComponent();
-            //DataContext = new TypeOfTourRequestSelectionViewModel(loggedInUser);
+            
         }
     }
 }

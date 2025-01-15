@@ -69,7 +69,7 @@ namespace BookingApp.Repository
             KeyPoint current = _keyPoints.Find(c => c.Id == keyPoints.Id);
             int index = _keyPoints.IndexOf(current);
             _keyPoints.Remove(current);
-            _keyPoints.Insert(index, keyPoints);       // keep ascending order of ids in file 
+            _keyPoints.Insert(index, keyPoints);      
             _serializer.ToCSV(FilePath, _keyPoints);
             return keyPoints;
         }

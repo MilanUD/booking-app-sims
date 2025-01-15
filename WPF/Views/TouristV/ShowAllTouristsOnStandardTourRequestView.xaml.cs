@@ -24,7 +24,6 @@ namespace BookingApp.WPF.Views
         public ShowAllTouristsOnStandardTourRequestView()
         {
             InitializeComponent();
-            //DataContext = new ShowAllTouristsOnStandardTourRequestViewModel(tourRequest);
         }
     }
 }

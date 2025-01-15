@@ -67,7 +67,7 @@ namespace BookingApp.Repository
             Reservation current = _reservations.Find(a => a.Id == Reservation.Id);
             int index = _reservations.IndexOf(current);
             _reservations.Remove(current);
-            _reservations.Insert(index, Reservation);       // keep ascending order of ids in file 
+            _reservations.Insert(index, Reservation);       
             _serializer.ToCSV(FilePath, _reservations);
             return Reservation;
         }

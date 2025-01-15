@@ -59,32 +59,25 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
         private void Close()
         {
             RequestClose?.Invoke(this, new DialogCloseRequestedEventArgs(false));
-            //this.Close();
         }
 
         private void Confirm()
         {
-            //int touristNumber = int.Parse(InputedTouristNumber);
             if (SelectedTour.EmptySpots >= InputedTouristNumber)
             {
-               // ReserveTourWindow reserveTourWindow = new ReserveTourWindow(InputedTouristNumber, SelectedTour.Id, LoggedInUser, UserGiftCards);
-                //reserveTourWindow.Show();
+
                 RequestClose?.Invoke(this, new DialogCloseRequestedEventArgs(true));
-                //this.Close();
             }
             else if (SelectedTour.EmptySpots != 0 && SelectedTour.EmptySpots < InputedTouristNumber)
             {
-                //textBox.Text = string.Format("There is only {0} spots left. Please enter a fewer number of tourists or choose a different tour", SelectedTour.EmptySpots);
-                //textBox.Foreground = new SolidColorBrush(Colors.Red);
+                
                 string message = string.Format("There are only {0} empty spots. Please insert lesser number of tourist of choose a different tour", SelectedTour.EmptySpots);
                 var feedbackViewModel = new FeedbackDialogViewModel(message);
                 bool? feedbackResult = _dialogService.ShowDialog(feedbackViewModel);
             }
             else
             {
-                //RecommendedAlternatives recommendedAlternatives = new RecommendedAlternatives(TourInstances, LoggedInUser, UserGiftCards);
-                //recommendedAlternatives.Show();
-                //this.Close();
+                
                 RequestClose?.Invoke(this, new DialogCloseRequestedEventArgs(true));
             }
         }

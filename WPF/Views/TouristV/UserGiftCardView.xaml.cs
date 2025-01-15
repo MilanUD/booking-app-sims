@@ -25,7 +25,7 @@ namespace BookingApp.WPF.Views
         public UserGiftCardView()
         {
             InitializeComponent();
-            //this.DataContext = new UserGiftCardViewModel(giftCards);
+            
         }
     }
 }

@@ -24,7 +24,7 @@ namespace BookingApp.WPF.Views
         public TouristNotificationView()
         {
             InitializeComponent();
-            //this.DataContext = new TouristNotificationViewModel(activeTours, loggedInUser);
+            
         }
     }
 }

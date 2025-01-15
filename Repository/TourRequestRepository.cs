@@ -119,7 +119,7 @@ namespace BookingApp.Repository
             TourRequest current = _tourRequest.Find(c => c.Id == tourRequest.Id);
             int index = _tourRequest.IndexOf(current);
             _tourRequest.Remove(current);
-            _tourRequest.Insert(index, tourRequest);       // keep ascending order of ids in file 
+            _tourRequest.Insert(index, tourRequest);       
             _serializer.ToCSV(FilePath, _tourRequest);
             return tourRequest;
         }

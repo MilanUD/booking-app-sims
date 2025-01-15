@@ -29,12 +29,12 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
                 Owner = currentMainWindow,
                 WindowStartupLocation = WindowStartupLocation.CenterOwner,
                 SizeToContent = SizeToContent.WidthAndHeight,
-                WindowStyle = WindowStyle.None, // Sakriva naslovnu traku i dugme za zatvaranje
-                ResizeMode = ResizeMode.NoResize, // Onemogućava promenu veličine prozora
+                WindowStyle = WindowStyle.None, 
+                ResizeMode = ResizeMode.NoResize, 
                 AllowsTransparency = false,
                 ShowInTaskbar = false,
-                BorderBrush = Brushes.Black, // Postavlja crni border
-                BorderThickness = new Thickness(2), // Postavlja debljinu bordera
+                BorderBrush = Brushes.Black, 
+                BorderThickness = new Thickness(2), 
                 Opacity = 0
             };
 
@@ -130,7 +130,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
                 return new ShowAllAddedRequestsToComplexTourRequestView { DataContext = viewModel };
             }
 
-            // Dodajte ostale view modele i odgovarajuće view-ove ovde
             return null;
         }
     }

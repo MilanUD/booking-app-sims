@@ -38,7 +38,7 @@ namespace BookingApp.Repository
             TourInstance current = _tourInstance.Find(c => c.Id == tourInstance.Id);
             int index = _tourInstance.IndexOf(current);
             _tourInstance.Remove(current);
-            _tourInstance.Insert(index, tourInstance);       // keep ascending order of ids in file 
+            _tourInstance.Insert(index, tourInstance);       
             _serializer.ToCSV(FilePath, _tourInstance);
             return tourInstance;
         }
@@ -94,7 +94,6 @@ namespace BookingApp.Repository
             _serializer.ToCSV(FilePath, _tourInstance);
         }
 
-        //ISPRAVNA izbrisi
         public List<TourInstance> GetForTheDay1(User user, ObservableCollection<TourInstance> tours)
         {
             return tours.Where(c => c.BaseTour.UserId == user.Id && c.Date.Date == DateTime.Today).ToList();

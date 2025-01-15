@@ -58,7 +58,7 @@ namespace BookingApp.Repository
             ComplexTourRequest current = _complexTourRequests.Find(c => c.Id == complexTourRequest.Id);
             int index = _complexTourRequests.IndexOf(current);
             _complexTourRequests.Remove(current);
-            _complexTourRequests.Insert(index, complexTourRequest);       // keep ascending order of ids in file 
+            _complexTourRequests.Insert(index, complexTourRequest);       
             _serializer.ToCSV(FilePath, _complexTourRequests);
             return complexTourRequest;
         }

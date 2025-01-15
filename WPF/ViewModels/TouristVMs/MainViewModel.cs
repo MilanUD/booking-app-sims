@@ -26,7 +26,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
 
         public MainViewModel(User loggedInUser)
         {
-            // Postavite početni ViewModel
             _dialogService = new DialogService();
             CurrentViewModel = new TouristHomeViewModel(this, loggedInUser, _dialogService);
         }

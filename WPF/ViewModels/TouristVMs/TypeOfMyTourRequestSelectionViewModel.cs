@@ -50,8 +50,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
         }
         public void ShowMyStandardTourRequests()
         {
-            //MyStandardTourRequestsView view = new MyStandardTourRequestsView(LoggedInUser);
-            //view.Show();
             SelectedOption = "Standard";
             RequestClose?.Invoke(this, new DialogCloseRequestedEventArgs(true, "Standard"));
         }

@@ -24,7 +24,7 @@ namespace BookingApp.WPF.Views
         public UserTourReviewView()
         {
             InitializeComponent();
-            //this.DataContext = new UserTourReviewViewModel(loggedInUser, tourInstance,Close);
+            
         }
     }
 }

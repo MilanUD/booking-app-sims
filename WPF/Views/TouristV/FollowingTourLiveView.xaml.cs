@@ -24,7 +24,6 @@ namespace BookingApp.WPF.Views
         public FollowingTourLiveView()
         {
             InitializeComponent();
-            //this.DataContext = new FollowingTourLiveViewModel(activeTour);
         }
     }
 }

@@ -24,7 +24,6 @@ namespace BookingApp.WPF.Views
         public MoreInfoAboutTourView()
         {
             InitializeComponent();
-            //this.DataContext = new MoreInfoAboutTourViewModel(tourInstance);
         }
     }
 }

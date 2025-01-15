@@ -18,7 +18,6 @@ namespace BookingApp.Domain.Model
         public int Id { get; set; }
         public string Name { get; set; }
         public int TourId { get; set; }
-        //public Tour Tour { get; set; }
         public bool Status { get; set; }
         public int Order { get; set; }
 
@@ -33,34 +32,11 @@ namespace BookingApp.Domain.Model
             Order = order;
         }
 
-        /*  public KeyPoint(int id, string name, int order)
-          {
-              Id = id;
-              Name = name;
-              Status = false;
-              Order = order;
-          }*/ ////////////////////////////////////////////////////////////ne znam za sta se koristi
-
         public override string ToString()
         {
             return $"ID: {Id,2} | Naziv: {Name,9} |";
         }
 
-        /*public string[] ToCSV()
-        {
-            string[] csvValues =
-            {
-                Id.ToString(),
-                Name
-            };
-            return csvValues;
-        }
-
-        public void FromCSV(string[] values)
-        {
-            Id = int.Parse(values[0]);
-            Name = values[1];
-        }*/ /////////////////////////////////////////////////////////mozda treba milanu
 
         public string[] ToCSV()
         {

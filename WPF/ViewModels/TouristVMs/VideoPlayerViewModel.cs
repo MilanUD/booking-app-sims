@@ -73,7 +73,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
 
         public VideoPlayerViewModel(MainViewModel mainViewModel, User user, IDialogService dialogService)
         {
-            // Primer video putanje, možete ovo dinamički postaviti
             VideoPath = "../../../Resources/TutorialVideo/TouristAppTutorial.mkv";
 
             PlayCommand = new RelayCommand(Play);

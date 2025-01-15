@@ -23,7 +23,6 @@ namespace BookingApp.WPF.Views.TouristV
         public NumberOfTouristInsertionView()
         {
             InitializeComponent();
-            //DataContext = new NumberOfTouristInsertionViewModel();
         }
     }
 }

@@ -98,12 +98,6 @@ namespace BookingApp.Domain.Model
 
         }
 
-        /* public override string ToString()
-         {
-             return $"ID: {Id,2} | Naziv: {Title,9} | Opis: {Description,9} | Mesto: {Location,10} | Jezik: {Language,5} | Maksimalan broj turista: {MaxTourists,3} | " +
-                 $"Kljucne tacke: {KeyPoints,20} | Datum i vreme: {Dates,15} | Trajanje: {Duration,3} | Slike: {Pictures,9} |";
-         }*/
-
         public string[] ToCSV()
         {
             string[] csvValues =

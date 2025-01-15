@@ -12,7 +12,7 @@ namespace BookingApp.WPF.Views.TouristV
 {
     public class TextBoxInputBehavior : Behavior<TextBox>
     {
-        private static readonly Regex _regex = new Regex("[^a-zA-Z-,]+"); // Regex for allowed characters
+        private static readonly Regex _regex = new Regex("[^a-zA-Z-,]+"); 
 
         protected override void OnAttached()
         {

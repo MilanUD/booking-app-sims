@@ -38,7 +38,7 @@
             </Setter>
         </Style>
 
-        <!-- Stil za klizač -->
+        
         <Style TargetType="Slider">
             <Setter Property="Minimum" Value="0"/>
             <Setter Property="Foreground" Value="#007ACC"/>

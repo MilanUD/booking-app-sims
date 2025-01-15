@@ -57,7 +57,7 @@ namespace BookingApp.Repository
             TourGiftCardAwardRecorder current = _tourGiftCardAwardRecorder.Find(c => c.Id == recorder.Id);
             int index = _tourGiftCardAwardRecorder.IndexOf(current);
             _tourGiftCardAwardRecorder.Remove(current);
-            _tourGiftCardAwardRecorder.Insert(index, recorder);       // keep ascending order of ids in file 
+            _tourGiftCardAwardRecorder.Insert(index, recorder);       
             _serializer.ToCSV(FilePath, _tourGiftCardAwardRecorder);
             return recorder;
         }

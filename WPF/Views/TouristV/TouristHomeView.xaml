@@ -9,7 +9,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1024">
     <UserControl.Resources>
-        <!-- Stil za TextBox -->
+       
         <Style x:Key="StyledTextBox" TargetType="TextBox">
             <Setter Property="Margin" Value="10" />
             <Setter Property="Padding" Value="5" />
@@ -19,7 +19,7 @@
             <Setter Property="Width" Value="200" />
             <Setter Property="FontFamily" Value="Arial"></Setter>
         </Style>
-        <!-- Stil za ComboBox -->
+        
         <Style x:Key="StyledComboBox" TargetType="ComboBox">
             <Setter Property="Margin" Value="10" />
             <Setter Property="Padding" Value="5" />
@@ -30,7 +30,7 @@
             <Setter Property="FontFamily" Value="Arial"></Setter>
         </Style>
 
-        <!-- Stil za GroupBox -->
+        
         <Style x:Key="StyledGroupBox" TargetType="GroupBox">
             <Setter Property="Margin" Value="10" />
             <Setter Property="Padding" Value="10" />
@@ -186,12 +186,12 @@
             </Setter>
         </Style>
 
-        <!-- Stil za dugmad unutar ListBoxItem -->
+        
         
 
     </UserControl.Resources>
 
-    <!--Gornji meni-->
+    
 
     <DockPanel>
         <DockPanel DockPanel.Dock="Top">
@@ -317,7 +317,7 @@
             </StackPanel>
         </DockPanel>
 
-        <!--Ture-->
+        
 
         <DockPanel DockPanel.Dock="Right">
             <StackPanel>

@@ -24,7 +24,6 @@ namespace BookingApp.WPF.Views
         public OpenLiveTourNotificationView()
         {
             InitializeComponent();
-            //DataContext = new OpenLiveTourNotificationViewModel(notification);
         }
     }
 }

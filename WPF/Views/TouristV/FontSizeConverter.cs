@@ -16,7 +16,7 @@ namespace BookingApp.WPF.Views.TouristV
             {
                 return originalSize * (percentage / 100);
             }
-            return 12; // Default font size if conversion fails
+            return 12; 
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

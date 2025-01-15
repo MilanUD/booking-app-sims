@@ -249,8 +249,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
 
         public void OpenTypeOfMyTourRequestSelection()
         {
-            //TypeOfMyTourRequestSelectionView view = new TypeOfMyTourRequestSelectionView(LoggedInUser);
-            //view.Show();
 
             var viewModel = new TypeOfMyTourRequestSelectionViewModel(_mainViewModel,LoggedInUser);
             bool? result = _dialogService.ShowDialog(viewModel);
@@ -294,8 +292,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
         {
             var viewModel = new ShowMorePicturesViewModel(tourInstance);
             bool? result = _dialogService.ShowDialog(viewModel);
-            //ShowMorePicturesView showMorePicturesView = new ShowMorePicturesView(tourInstance);
-            //showMorePicturesView.Show();
         }
 
         public void LinkKeyPointsWithTourInstances()
@@ -358,8 +354,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
 
         private void OnSearchClick()
         {
-            //bool isValidNumber = int.TryParse(numberOfPeopleInput.Text, out int numberOfPeople);
-            //if (!isValidNumber) numberOfPeople = 0;
 
             var filteredTours = TourInstances
                 .Where(t => (string.IsNullOrEmpty(LocationSearch) || t.BaseTour.Location.Contains(LocationSearch, StringComparison.OrdinalIgnoreCase)) &&
@@ -390,8 +384,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
                     _mainViewModel.SwitchView(new RecommendedAlternativeToursViewModel(_mainViewModel, viewModel.TourInstances, LoggedInUser, UserGiftCards, _dialogService));
                 }
             }
-            //NumberOfTouristInsertion numberOfTouristInsertion = new NumberOfTouristInsertion(tourInstance, TourInstances, LoggedInUser, UserGiftCards);
-            //numberOfTouristInsertion.Show();
 
         }
 
@@ -431,8 +423,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
 
         private void ShowTouristVouchers()
         {
-            //UserGiftCardView userGiftCardView = new UserGiftCardView(UserGiftCards);
-            //userGiftCardView.Show();
             var viewModel = new UserGiftCardViewModel(UserGiftCards);
             bool? result = _dialogService.ShowDialog(viewModel);
             IsMenuPopupOpen = false;
@@ -440,8 +430,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
 
         private void TrackTourLive(TourInstance tourInstance)
         {
-            //FollowingTourLiveView followingTourLiveView = new FollowingTourLiveView(tourInstance);
-            //followingTourLiveView.Show();
             var viewModel = new FollowingTourLiveViewModel(tourInstance);
             bool? result = _dialogService.ShowDialog(viewModel);
         }
@@ -449,9 +437,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
         private void ShowNotifications()
         {
             IsNotificationPopupOpen = !IsNotificationPopupOpen;
-            /*
-            TouristNotificationView touristNotificationView = new TouristNotificationView(ActiveTours.ToList(), LoggedInUser);
-            touristNotificationView.Show(); */
         }
 
         private void OpenTypeOfTourRequestSelection()
@@ -483,8 +468,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
             {
                 var viewModel = new OpenLiveTourNotificationViewModel(notification);
                 bool? result = _dialogService.ShowDialog(viewModel);
-                //OpenLiveTourNotificationView liveTourNotification = new OpenLiveTourNotificationView(notification);
-                //liveTourNotification.Show();
                 IsNotificationPopupOpen = !IsNotificationPopupOpen;
             }
             else if (notification.Type == NotificationType.TourRequestAcceptance)
@@ -498,8 +481,6 @@ namespace BookingApp.WPF.ViewModels.TouristVMs
                 var service = Injector.Injector.CreateInstance<ITourInstanceService>();
                 var viewModel = new MoreInfoAboutTourViewModel(service.GetById(tourCreationNotification.CreatedTourInstanceId),_dialogService);
                 bool? result = _dialogService.ShowDialog(viewModel);
-                //MoreInfoAboutTourView view = new MoreInfoAboutTourView(service.GetById(tourCreationNotification.CreatedTourInstanceId));
-                //view.Show();
                 IsNotificationPopupOpen = !IsNotificationPopupOpen;
             }
         }
