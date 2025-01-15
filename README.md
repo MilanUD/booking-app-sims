@@ -19,9 +19,14 @@ This is a WPF booking application that provides different functionalities based 
 - **Dependency Injection**: Implemented
 - **Observer Pattern**: Used for real-time updates
 - **NuGet Packages**:  
-  - `Newtonsoft.Json`: For JSON serialization and deserialization  
-  - `PdfSharp`: For generating PDF reports  
-  - `Prism`: For MVVM support and dependency injection  
+- `Extended.Wpf.Toolkit` (v4.6.0): A collection of WPF controls for creating modern Windows applications.
+- `itext7` (v8.0.4): A library for PDF generation written entirely in C# for the .NET platform.
+- `itext7.bouncy-castle-adapter` (v8.0.4): A BouncyCastle adapter module for additional cryptography support in PDF generation.
+- `LiveCharts.Wpf` (v0.9.7): A flexible and interactive library for data visualization in WPF applications.
+- `MahApps.Metro` (v2.4.10): A toolkit for creating modern, "Metro-style" UI for WPF applications with minimal effort.
+- `Microsoft.Xaml.Behaviors.Wpf` (v1.1.77): Provides reusable functionality for XAML elements, making it easy to add interactivity to WPF applications.
+- `OxyPlot.Wpf`: A plotting library for WPF, useful for creating charts and graphs.
+
 
 ## Project Structure
 
@@ -51,8 +56,7 @@ This is a WPF booking application that provides different functionalities based 
 git clone https://github.com/MilanUD/booking-app-sims.git
 ```
 2. Open the project in Visual Studio.
-3. Install all dependencies via NuGet Package Manager.
-4. Run the application by pressing the **Start** button.
+3. Run the application by pressing the **Start** button.
 
 ## Features
 
@@ -65,11 +69,12 @@ git clone https://github.com/MilanUD/booking-app-sims.git
 - Tailored interface for elderly users:
 - Large fonts and buttons.
 - Tablet resolution support.
+- Rating visited tours
 
 ### Other Parts
-- **Guide**: Manages tours and tour requests.
-- **Guest**: Books accommodations (Isidora Mićković).
-- **Owner**: Creates and manages accommodations (Željana Pelić and Milena Tomanović).
+- **Guide**: Manages tours and tour requests (Isidora Mićković).
+- **Guest**: Books accommodations (Milena Tomanović).
+- **Owner**: Creates and manages accommodations (Željana Pelić).
 
 ## Team Members
 - **Milan Keča**: Tourist.
